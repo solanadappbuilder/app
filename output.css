@@ -733,6 +733,18 @@ video {
   margin-top: 2rem;
 }
 
+.mb-32 {
+  margin-bottom: 8rem;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1817,6 +1829,11 @@ video {
   border-color: rgb(96 165 250 / var(--tw-border-opacity));
 }
 
+.border-primary-blue {
+  --tw-border-opacity: 1;
+  border-color: rgb(55 140 255 / var(--tw-border-opacity));
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -1840,6 +1857,11 @@ video {
 .bg-primary-blue {
   --tw-bg-opacity: 1;
   background-color: rgb(55 140 255 / var(--tw-bg-opacity));
+}
+
+.bg-blue-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 37 84 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-custom {
@@ -1956,6 +1978,10 @@ video {
      object-fit: scale-down;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
@@ -1998,6 +2024,10 @@ video {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .text-left {
@@ -2184,6 +2214,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-primary-blue {
+  --tw-text-opacity: 1;
+  color: rgb(55 140 255 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2373,6 +2408,12 @@ video {
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-custom-shadow {
+  --tw-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.17);
+  --tw-shadow-colored: 0 4px 24px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2577,12 +2618,20 @@ video {
     margin-top: 10rem;
   }
 
+  .md\:mr-auto {
+    margin-right: auto;
+  }
+
   .md\:block {
     display: block;
   }
 
   .md\:w-6\/12 {
     width: 50%;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
   }
 
   .md\:px-0 {
