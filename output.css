@@ -745,6 +745,18 @@ video {
   margin-bottom: 2rem;
 }
 
+.mt-auto {
+  margin-top: auto;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -2022,6 +2034,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .pt-4 {
   padding-top: 1rem;
 }
@@ -2587,6 +2604,11 @@ video {
 
 .hover\:font-bold:hover {
   font-weight: 700;
+}
+
+.hover\:text-primary-blue:hover {
+  --tw-text-opacity: 1;
+  color: rgb(55 140 255 / var(--tw-text-opacity));
 }
 
 .before\:hover\:text-center:hover::before {
