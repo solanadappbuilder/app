@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLANA DAPP BUILDER</title>
+    <link href="output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body class="bg-dashboard-bg text-white">
+    <div class="flex flex-row">
+      <div
+        class="hidden lg:flex fixed top-0 left-0 z-10 flex-col flex-shrink-0 lg:w-[265px] h-full overflow-y-auto space-between text-grayBlue bg-black px-4 pt-4 text-sm border-r border-1 border-gray-800"
+      >
+        <div class="flex flex-row items-center gap-2 mb-8">
+          <img src="images/sdb-logo.svg" class="h-[50px] w-auto" />
+          <p class="font-bold">SOLANA DAPP BUILDER</p>
+        </div>
+        <a href="dashboard.html">
+          <div
+            class="flex flex-row items-center gap-4 bg-slate-700 rounded-lg px-4 py-2 mt-8 cursor-pointer"
+          >
+            <img src="images/dashboard-icon.svg" alt="dashboard icon" />
+            <p>Dashboard</p>
+          </div>
+        </a>
+
+        <a href="staking.html">
+          <div
+            class="flex flex-row items-center gap-4 rounded-lg px-4 py-2 mt-4 hover:bg-slate-500 transition cursor-pointer"
+          >
+            <img src="images/staking-icon.svg" alt="staking icon" />
+            <p>Staking</p>
+          </div>
+        </a>
+        <a
+          href="index.html"
+          class="mt-auto text-white mb-12 text-center border border-white rounded-lg px-4 py-2"
+          >Go back to Website</a
+        >
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="flex flex-col">
+      <!-- Top Bar -->
+      <div
+        class="flex flex-row justify-between lg:pl-[265px] border-b border-gray-800 w-full mb-auto h-[100px]"
+      >
+        <!-- Mobile hamburger icon and close icon !-->
+        <div class="ml-4 w-full justify-start lg:hidden items-center my-auto">
+          <img
+            id="nav-icon-open"
+            src="images/Menu.svg"
+            alt="menu icon"
+            class="lg:hidden w-[35px] h-auto"
+          />
+          <img
+            id="nav-icon-close"
+            src="images/close-icon.svg"
+            alt="close"
+            class="hidden w-[35px] h-auto z-40"
+          />
+        </div>
+
+        <p class="font-semibold my-auto pl-8 mr-auto hidden lg:inline-block">
+          Dashboard
+        </p>
+        <button
+          id="connectWalletButton"
+          class="mr-8 px-4 py-2 w-[200px] lg:py-2 rounded-lg my-auto transition gradient-background hover:text-white text-black"
+          onclick="walletConnected ? showDisconnectModal() : showModal()"
+        >
+          Connect Wallet
+        </button>
+      </div>
+
+      <div
+        class="flex flex-col mx-auto lg:w-9/12 lg:ml-[265px] px-4 lg:px-16 pt-16"
+      >
+        <div>
+          <h2 class="text-4xl font-semibold">Welcome to Solana dApp Builder</h2>
+          <p class="font-light text-lg mt-2">
+            Platform launch coming in December 2023
+          </p>
+        </div>
+
+        <div class="flex flex-col xl:flex-row mt-16 gap-4 w-full">
+          <!-- Left container -->
+          <div
+            class="bg-blue-gradient flex flex-col p-8 rounded-lg gap-4 flex-1"
+          >
+            <h3 class="text-2xl font-bold">Deploy a SPL Token</h3>
+            <p class="text-primary-blue font-semibold text-lg">
+              Token Deployer
+            </p>
+            <p class="">
+              Make your own SPL contract tailored to your own specs, then
+              publish it on the Solana network.
+            </p>
+            <a
+              class="border border-primary-blue px-8 py-3 rounded-lg mr-auto mt-auto"
+              >Coming Soon</a
+            >
+          </div>
+          <!-- Right container -->
+          <div
+            class="bg-blue-gradient flex flex-col p-8 rounded-lg gap-4 flex-1"
+          >
+            <h3 class="text-2xl font-bold">Deploy a SPL NFT Token</h3>
+            <p class="text-primary-blue font-semibold text-lg">NFT Deployer</p>
+            <p class="">
+              Launch your NFT collection easily on Solana network. Upload your
+              images to your NFTs, and deploy the NFT contract on Solana.
+            </p>
+            <a
+              class="border border-primary-blue px-8 py-3 rounded-lg mr-auto mt-auto p-8"
+              >Coming Soon</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- JOIN TELEGRAM CONTAINER -->
+      <div class="mx-auto lg:w-9/12 lg:ml-[265px] mt-8 mb-32">
+        <div class="mx-4 lg:mx-16">
+          <div
+            class="bg-primary-bg border border-slate-600 items-stretch p-16 rounded-lg"
+          >
+            <h2 class="text-white text-3xl font-semibold text-center">
+              Join our Telegram community to stay up to date with updates.
+              <a
+                href="https://t.me/SolanaDappBuilder"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-base px-4 py-2 bg-primary-blue w-6/12 mx-auto text-white rounded-lg font-semibold transition block hover:bg-slate-600 mt-4"
+                >Join our Telegram Channel</a
+              >
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile nav links -->
+    <div
+      id="nav-links-mobile"
+      class="fixed top-0 right-0 h-screen w-full bg-black translate-x-full overflow-y-auto transition-transform duration-300 ease-in-out"
+    >
+      <div class="pt-[100px]">
+        <a href="dashboard.html" class="mobile-link block p-4 mt-8 font-medium"
+          >Dashboard</a
+        >
+        <a href="staking.html" class="mobile-link block p-4 font-medium"
+          >Staking</a
+        >
+      </div>
+    </div>
+
+    <!-- Modal content -->
+    <div
+      id="walletModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 overflow-y-auto h-full w-full"
+    >
+      <div
+        class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white"
+      >
+        <button
+          id="closeModalButton"
+          class="absolute top-0 right-0 mt-2 mr-2 text-black text-lg font-semibold"
+          onclick="hideModal()"
+        >
+          &times;
+          <!-- Close Btn -->
+        </button>
+        <div class="mt-3 text-center">
+          <h3 class="text-lg leading-6 font-medium text-gray-900">
+            Connect Wallet
+          </h3>
+          <div class="mt-2">
+            <p class="text-sm text-gray-500 mt-4">
+              Choose your wallet to connect with the dApp.
+            </p>
+          </div>
+          <div class="items-center px-4 py-3">
+            <button
+              id="connectWalletButton"
+              class="flex items-center justify-center bg-phantom-color px-4 py-2 rounded-lg hover:text-black transition mx-auto mt-4 gap-2"
+              onclick="connectWallet()"
+            >
+              <img
+                src="images/Phantom-Icon_Circle_60x60.png"
+                class="h-[50px] w-auto"
+                alt="Phantom Wallet Icon"
+              />
+              Connect Phantom Wallet
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="disconnectModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 overflow-y-auto h-full w-full"
+    >
+      <!-- Modal content -->
+      <div
+        class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white"
+      >
+        <div class="text-center">
+          <h3 class="text-lg leading-6 font-medium text-gray-900">
+            Disconnect Wallet
+          </h3>
+          <div class="mt-2">
+            <p class="text-sm text-gray-500">
+              Are you sure you want to disconnect your wallet?
+            </p>
+          </div>
+          <div class="flex justify-center items-center space-x-4 mt-4">
+            <button
+              id="confirmDisconnect"
+              class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition"
+              onclick="disconnectWallet()"
+            >
+              Disconnect
+            </button>
+            <button
+              onclick="hideDisconnectModal()"
+              class="bg-gray-300 text-black px-4 py-2 rounded-lg hover:bg-gray-400 transition"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
